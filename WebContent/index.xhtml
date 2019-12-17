@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+
+
+<h:head>
+    <title><h:outputText value="#{msg.welcomeTitle}" /></title>
+</h:head>
+
+<h:body>
+	<center>
+		<section class="index" style ="padding :80px;background-color : #FE08D5 ; border : 1px solid black;">
+		<h:outputText value="Login" /><br/>
+		<h:form border="1">
+		<h:outputText value="User: "/><br/>
+		<h:inputText value="#{userLoginBean.login}" /><br/>
+		<h:outputText value="Password: "/><br/>
+		<h:inputSecret value= "#{userLoginBean.passwd}"/><br/>
+		<h:commandButton value="sing in" action="#{userLoginController.verifyUser()}"/>
+		</h:form>
+	</section>
+	</center>
+</h:body>
+</html>

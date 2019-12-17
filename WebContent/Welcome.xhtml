@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+<meta charset="ISO-8859-1"/>
+<title>Welcome</title>
+</h:head>
+<h:body>
+	<h1>welcome</h1>
+	<center>
+	<section class="Ditas" style ="padding :80px;background-color : #08FE5D ; border : 1px solid black;">
+	<h:form rendered="#{userLoginBean.logged}"><br/>
+		<h:outputText value="Bienvenida  #{userLoginBean.login}" /><br/>
+		<h:commandLink id = "boton_logout" value =" logout" action="#{userLoginController.logout()}" /><br/>
+		<br/>
+		<h:outputText id="ditas" value="#{dilbertSaysController.getRandomSay()}"/><br/>
+		<br/>
+		<h:commandButton id="Recargar" value="Nueva Dita">
+			<f:ajax render="ditas"/>
+		</h:commandButton>
+	</h:form>
+	<h:form rendered="#{userLoginBean.logged eq false}">
+		<h:outputText value="Registrarse" /><br/>
+		<a href="index.xhtml">sing in</a>
+	</h:form>
+	</section>
+	</center>
+</h:body>
+</html>
