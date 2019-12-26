@@ -19,6 +19,7 @@ public class UserDB {
 		
 		authorizedUsers.put("Michelle", "1234");
 		authorizedUsers.put("Hanks", "1234");
+		authorizedUsers.put("test1", "1114");
 		
 	}
 	
