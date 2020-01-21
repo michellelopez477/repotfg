@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
  
   <groupId>SonarTFG</groupId>
-  <artifactId>SonarTest Maven</artifactId>
+  <artifactId>projectTFG</artifactId>
   <version>1.0-SNAPSHOT</version>
  
   <properties>
@@ -20,4 +20,13 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <build>
+  	<directory>/src</directory>
+  	<sourceDirectory>/src/.</sourceDirectory>
+  	<resources>
+  		<resource>
+			<directory>/WebContent</directory>
+		</resource>
+  	</resources>
+  </build>
 </project>
