@@ -18,9 +18,7 @@ public class UserDB {
 	private void init() {
 		
 		authorizedUsers.put("Michelle", "1234");
-		authorizedUsers.put("Hanks", "1234");
-		authorizedUsers.put("test1", "1114");
-		
+		authorizedUsers.put("Hanks", "1234");	
 	}
 	
 	public Hashtable<String,String> getAuthorizedUsers() {
